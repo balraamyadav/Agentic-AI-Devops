@@ -1,0 +1,15 @@
+docker:
+  enabled: true
+
+kubernetes:
+  enabled: true
+  context: default
+
+alertmanager:
+  enabled: true
+  url: http://localhost:9093
+
+agent:
+  interval: 60
+  model: llama3
+
