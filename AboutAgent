@@ -1,0 +1,31 @@
+                ┌────────────────────┐
+                │   Streamlit UI     │
+                │  (app.py)          │
+                └─────────┬──────────┘
+                          │
+                          ▼
+                ┌────────────────────┐
+                │   Agent Engine     │
+                │   agent.py         │
+                └─────────┬──────────┘
+                          │
+     ┌────────────────────┼────────────────────┐
+     ▼                    ▼                    ▼
+┌──────────────┐  ┌──────────────┐   ┌────────────────┐
+│ Docker Tool  │  │ K8s Tool     │   │ Alert Tool     │
+│ docker_tool  │  │ k8s_tool     │   │ alert_tool     │
+└──────┬───────┘  └──────┬───────┘   └──────┬─────────┘
+       │                  │                  │
+       ▼                  ▼                  ▼
+ Docker Engine     Kubernetes API     Alertmanager API
+ (containers)        (cluster)         (alerts)
+
+                          │
+                          ▼
+                ┌────────────────────┐
+                │  AI Model Layer    │
+                │  (Llama3 / LLM)   │
+                └────────────────────┘
+                          │
+                          ▼
+                Decision / Recommendation
